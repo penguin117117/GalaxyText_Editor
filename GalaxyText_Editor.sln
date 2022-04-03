@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemLibrary", "FileSy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyFileLibrary", "GalaxyFileLibrary\GalaxyFileLibrary.csproj", "{0A57333A-D283-4623-96EA-6ACD6406A4F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyFileStreamLibrary", "GalaxyFileStreamLibrary\GalaxyFileStreamLibrary.csproj", "{05738859-131A-44EF-811A-525FED410B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0A57333A-D283-4623-96EA-6ACD6406A4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A57333A-D283-4623-96EA-6ACD6406A4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A57333A-D283-4623-96EA-6ACD6406A4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05738859-131A-44EF-811A-525FED410B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05738859-131A-44EF-811A-525FED410B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05738859-131A-44EF-811A-525FED410B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05738859-131A-44EF-811A-525FED410B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

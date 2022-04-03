@@ -52,5 +52,11 @@
   <ItemGroup>
     <Folder Include="FileCheck\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GalaxyFileStreamLibrary\GalaxyFileStreamLibrary.csproj">
+      <Project>{05738859-131a-44ef-811a-525fed410b83}</Project>
+      <Name>GalaxyFileStreamLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

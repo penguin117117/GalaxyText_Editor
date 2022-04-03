@@ -32,18 +32,6 @@ namespace FileSystemLibrary
         }
     }
 
-    //public class Msbt : IBasicDataInfo
-    //{
-    //    public string Path { get; private set; }
-    //    public string PathExtention { get; private set; }
-    //    public string BinExtention { get; private set; }
-
-    //    public Msbt()
-    //    {
-
-    //    }
-    //}
-
     public class FileDialogLibrary
     {
         internal readonly string[] fileExtentions = null;

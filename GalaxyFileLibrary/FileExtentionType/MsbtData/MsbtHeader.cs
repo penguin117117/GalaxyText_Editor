@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Globalization;
+using GalaxyFileStreamSupportSystem;
 
 namespace GalaxyFileLibrary.FileExtentionType.MsbtData
 {
@@ -32,7 +33,8 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
         public ushort Padding2 { get; private set; }
         public uint   FileSize { get; set; }
         public ushort[] Paddings { get; private set; }/* => new ushort[] { 0x0000, 0x0000, 0x0000, 0x0000, 0x0000 };*/
-        
+
+        private const int PaddingRange = 5;
 
         public MsbtHeader() 
         {
@@ -52,6 +54,28 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
             Endian = BitConverter.ToUInt16(tmp,0);
 
             Console.WriteLine("Target: " + Endian.ToString("X"));
+
+            Padding1 = BigEndian.ReadUInt16(br);
+            EncodingType = br.ReadByte();
+            VerNum = br.ReadByte();
+            SectionCount = BigEndian.ReadUInt16(br);
+            Padding2 = BigEndian.ReadUInt16(br);
+            FileSize = BigEndian.ReadUInt32(br);
+
+            Paddings = new ushort[PaddingRange];
+
+            for (int i = 0; i < PaddingRange; i++) {
+                Paddings[i] = BigEndian.ReadUInt16(br);
+            }
+
+            Console.WriteLine(Magic);
+            Console.WriteLine(Endian);
+            Console.WriteLine(Padding1);
+            Console.WriteLine(EncodingType);
+            Console.WriteLine(VerNum);
+            Console.WriteLine(SectionCount);
+            Console.WriteLine(Padding2);
+            Console.WriteLine(FileSize);
 
             return;
             var Reverse = (ushort)~Endian;

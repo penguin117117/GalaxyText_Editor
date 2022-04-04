@@ -35,10 +35,10 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
             //var str = Encoding.ASCII.GetString(magic);
             //Console.WriteLine(str);
             
-            using (MemoryStream ms = new MemoryStream(OldBinaryData)) 
-            {
-                using (BinaryReader br = new BinaryReader(ms)) 
-                {
+            using (MemoryStream ms = new MemoryStream(OldBinaryData)) {
+
+                using (BinaryReader br = new BinaryReader(ms)) {
+
                     _msbtHeader.Read(br);
                 };
             } ;
@@ -47,17 +47,25 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
 
         private void HeaderRead(byte[] binData) 
         {
-            bool IsSupportType = true;
-            MemoryStream ms = new MemoryStream(binData);
-            BinaryReader br = new BinaryReader(ms);
-            var magic = Encoding.ASCII.GetString(br.ReadBytes(8));
-            Console.WriteLine("Magic: " + magic);
-            if (magic != _msbtHeader.Magic) IsSupportType = false;
-            br.Close();
-            ms.Close();
+            bool isSupportType = true;
+            string magic;
 
-            if (!IsSupportType)
-            {
+            using (MemoryStream ms = new MemoryStream(binData)) {
+                
+                using (BinaryReader br = new BinaryReader(ms)) {
+
+                    magic = Encoding.ASCII.GetString(br.ReadBytes(8));
+                };
+            } ;
+
+
+            Console.WriteLine("Magic: " + magic);
+
+            if (magic != _msbtHeader.Magic) { 
+                isSupportType = false; 
+            }
+
+            if (!isSupportType) {
                 Console.WriteLine("***********************************");
                 Console.WriteLine("Unsupported Msbt file.\n");
                 Console.WriteLine("Supported" + ": " + _msbtHeader.Magic);

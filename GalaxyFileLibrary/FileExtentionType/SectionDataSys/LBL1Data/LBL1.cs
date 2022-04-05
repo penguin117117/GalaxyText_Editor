@@ -33,12 +33,14 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.LBL1Data
                 labelData[i].Read(br);
             }
 
-            var removeDuplication = labelData.Where(x => x.HashSkip != 0);
-            var temp = removeDuplication.ToArray();
-
-            Console.WriteLine($"temp: { temp.Count() }");
+            Console.WriteLine($"RemoveDuplication: { RemoveDuplication(labelData).Count() }");
 
             Console.WriteLine(br.BaseStream.Position.ToString("X"));
+        }
+
+        private LabelData[] RemoveDuplication(LabelData[] labelData) 
+        {
+            return labelData.Where(x => x.HashSkip != 0).ToArray();
         }
     }
 

@@ -77,15 +77,15 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
             Console.WriteLine(Padding2);
             Console.WriteLine(FileSize);
 
-            return;
-            var Reverse = (ushort)~Endian;
-            var EndianNum = (ushort)(((Reverse >> 8)) * 3);
+            //return;
+            //var Reverse = (ushort)~Endian;
+            //var EndianNum = (ushort)(((Reverse >> 8)) * 3);
 
-            Console.WriteLine(EndianNum.ToString());
+            //Console.WriteLine(EndianNum.ToString());
 
-            EncodingName = EncodingTypeSelect[EndianNum + EncodingType];
+            //EncodingName = EncodingTypeSelect[EndianNum + EncodingType];
 
-            Console.WriteLine(EncodingName);
+            //Console.WriteLine(EncodingName);
         }
     }
 }

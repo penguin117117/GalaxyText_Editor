@@ -53,6 +53,10 @@
     <Folder Include="FileCheck\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FileSystemLibrary\FileSystemLibrary.csproj">
+      <Project>{d67673bc-8e46-4218-a00b-d1d61af9978d}</Project>
+      <Name>FileSystemLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GalaxyFileStreamLibrary\GalaxyFileStreamLibrary.csproj">
       <Project>{05738859-131a-44ef-811a-525fed410b83}</Project>
       <Name>GalaxyFileStreamLibrary</Name>

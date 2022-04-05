@@ -20,26 +20,18 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
         public Msbt(byte[] binData) 
         {
             _msbtHeader = new MsbtHeader();
-
-            
-
-            //HeaderRead(binData);
             _lbl1 = new LBL1();
             OldBinaryData = binData;
         }
 
         public void Load() 
         {
-            //byte[] magic = new byte[8];
-            //Array.Copy(OldBinaryData, magic, 8);
-            //var str = Encoding.ASCII.GetString(magic);
-            //Console.WriteLine(str);
-            
             using (MemoryStream ms = new MemoryStream(OldBinaryData)) {
 
                 using (BinaryReader br = new BinaryReader(ms)) {
 
                     _msbtHeader.Read(br);
+                    _lbl1.Read(br);
                 };
             } ;
         }

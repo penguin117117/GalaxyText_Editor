@@ -48,6 +48,7 @@
     <Compile Include="FileExtentionType\SectionDataSys\ATR1Data\ATR1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\ILBL1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\LBL1.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TXT2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

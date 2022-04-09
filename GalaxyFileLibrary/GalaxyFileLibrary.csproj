@@ -45,6 +45,7 @@
     <Compile Include="FileExtentionType\MsbtData\Msbt.cs" />
     <Compile Include="FileExtentionType\MsbtData\IMsbt.cs" />
     <Compile Include="FileExtentionType\MsbtData\MsbtHeader.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\ATR1Data\ATR1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\ILBL1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\LBL1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

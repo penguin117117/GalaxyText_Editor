@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using GalaxyFileLibrary.FileExtentionType.SectionDataSys.LBL1Data;
+using GalaxyFileLibrary.FileExtentionType.SectionDataSys.ATR1Data;
 
 namespace GalaxyFileLibrary.FileExtentionType.MsbtData
 {
@@ -15,12 +16,14 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
 
         private IMSB_X_Header _msbtHeader;
         private ILBL1 _lbl1;
+        private ATR1 _atr1;
         private byte[] OldBinaryData;
 
         public Msbt(byte[] binData) 
         {
             _msbtHeader = new MsbtHeader();
             _lbl1 = new LBL1();
+            _atr1 = new ATR1();
             OldBinaryData = binData;
         }
 
@@ -32,6 +35,7 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
 
                     _msbtHeader.Read(br);
                     _lbl1.Read(br);
+                    _atr1.Read(br);
                 };
             } ;
         }

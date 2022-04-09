@@ -104,7 +104,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.LBL1Data
             LabelName        = Encoding.ASCII.GetString(br.ReadBytes(TextLength));
             LabelID          = BigEndian.ReadUInt32(br);
 
-            //Console.WriteLine(LabelName);
+            Console.WriteLine(LabelName);
         }
     }
 

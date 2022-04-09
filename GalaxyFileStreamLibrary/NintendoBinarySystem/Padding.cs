@@ -11,9 +11,10 @@ namespace GalaxyFileStreamLibrary.NintendoBinarySystem
     {
         public static void ReadSkip(BinaryReader br) 
         {
-            while (br.BaseStream.Position % 0x20 != 0) 
+            while (br.BaseStream.Position % 16 != 0) 
             {
-                br.ReadByte();
+                byte ascii = br.ReadByte();
+                Console.WriteLine((char)ascii);
             }
         }
     }

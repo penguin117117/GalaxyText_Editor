@@ -18,3 +18,13 @@
 - [ ] LBL1
 - [ ] ATR1
 - [ ] TXT2
+
+## ビルド
+- .NET Framework 4.7.2
+- Visual Studio 2019
+
+### クローン
+クローンは下記のコマンドを実行してください。
+```
+https://github.com/penguin117117/GalaxyText_Editor.git --recursive
+```

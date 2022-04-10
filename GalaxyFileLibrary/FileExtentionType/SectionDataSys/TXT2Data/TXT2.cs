@@ -81,8 +81,12 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
             Offset = BigEndian.ReadInt32(br);
         }
 
+        /*
+         * Note: Banner.msbtはNull末端と改行コードのみで読み込み可能
+         */
         public void ReadText(BinaryReader br) 
         {
+
             while (true)
             {
                 byte[] Top2byte = br.ReadBytes(2);

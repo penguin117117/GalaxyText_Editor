@@ -87,10 +87,17 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
             {
                 byte[] Top2byte = br.ReadBytes(2);
 
-                bool isEnd = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x00);
-                bool isTag = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0E);
+                bool isEnd       = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x00);
+                bool isNewLine   = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0A);
+                bool isTag       = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0E);
 
                 if (isEnd) break;
+
+                if (isNewLine) 
+                {
+                    Text += "</br>";
+                    continue;
+                }
 
                 if (isTag == false)
                 {

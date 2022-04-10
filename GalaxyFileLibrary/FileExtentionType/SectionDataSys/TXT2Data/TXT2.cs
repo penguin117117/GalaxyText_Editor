@@ -38,14 +38,6 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
             TextEntries = new TextEntries();
             TextEntries.Read(br, EntrySize);
 
-            //List<int> tes = new List<int>();
-            //{
-            //    for (int i = 0; i < EntrySize; i++) 
-            //    {
-            //        tes.Add(BigEndian.ReadInt32(br));
-            //    }
-            //}
-
             Console.WriteLine("TXT2 End Address: 0x" + br.BaseStream.Position.ToString("X"));
         }
     }

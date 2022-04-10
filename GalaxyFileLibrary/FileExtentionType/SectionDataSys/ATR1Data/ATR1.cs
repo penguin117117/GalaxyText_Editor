@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using GalaxyFileStreamSupportSystem;
 using GalaxyFileStreamLibrary.NintendoBinarySystem;
+using GalaxyFileStreamLibrary;
 
 namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.ATR1Data
 {
@@ -83,7 +84,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.ATR1Data
                     }
                 }
 
-                FromBinary[i].SpecialText = Encoding.GetEncoding("utf-16BE").GetString(list.ToArray());
+                FromBinary[i].SpecialText = Encoding.GetEncoding(EncodingName.UTF16_Bigendian/*"utf-16BE"*/).GetString(list.ToArray());
             }
         }
     }

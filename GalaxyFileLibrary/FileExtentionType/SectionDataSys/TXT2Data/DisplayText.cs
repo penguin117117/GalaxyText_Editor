@@ -34,6 +34,11 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
                 {
                     Console.WriteLine(Text);
                     Console.WriteLine("pos: 0x" + br.BaseStream.Position.ToString("X"));
+
+                    //TagModifyクラスをここに配置する
+                    TagData.TagModify tagModify = new TagData.TagModify();
+                    Text += tagModify.Read(br);
+
                     throw new Exception();
                     continue;
                 }
@@ -41,54 +46,6 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
                 Text += Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(Top2byte);
                 
             }
-        }
-    }
-
-    public class TagModify 
-    {
-        private readonly Dictionary<byte, ITagData> _tagDictionary = new Dictionary<byte, ITagData> 
-        {
-            { 0x00 , new SystemTag() }
-        };
-
-        public void Read(BinaryReader br) 
-        {
-            byte[] CategoryByte = br.ReadBytes(2);
-
-            _tagDictionary[CategoryByte[1]].Read(br);
-        }
-    }
-
-    public interface ITagData 
-    {
-        string Read(BinaryReader br);
-    }
-
-    public class SystemTag : ITagData
-    {
-        private readonly Dictionary<byte, ISystemTagSubCategory> _systemTagSubCategory = new Dictionary<byte, ISystemTagSubCategory>() 
-        {
-            { 0x00 , new Ruby() }
-        };
-
-        public string Read(BinaryReader br)
-        {
-            byte[] subCategory_2Byte = br.ReadBytes(2);
-
-            return _systemTagSubCategory[subCategory_2Byte[1]].Read(br);
-        }
-    }
-
-    public interface ISystemTagSubCategory 
-    {
-        string Read(BinaryReader br);
-    }
-
-    public class Ruby : ISystemTagSubCategory
-    {
-        public string Read(BinaryReader br)
-        {
-            return string.Empty;
         }
     }
 }

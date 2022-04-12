@@ -79,35 +79,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
         public void ReadText(BinaryReader br) 
         {
 
-            while (true)
-            {
-                byte[] Top2byte = br.ReadBytes(2);
-
-                bool isEnd       = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x00);
-                bool isNewLine   = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0A);
-                bool isTag       = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0E);
-
-                if (isEnd) break;
-
-                if (isNewLine) 
-                {
-                    Text += "</br>";
-                    continue;
-                }
-
-                if (isTag == false)
-                {
-                    Text += Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(Top2byte);
-                    continue;
-                }
-                else
-                {
-                    Console.WriteLine(Text);
-                    Console.WriteLine("pos: 0x" + br.BaseStream.Position.ToString("X"));
-                    throw new Exception();
-                }
-
-            }
+            
 
             Console.WriteLine("End Text");
             Console.WriteLine(Text);

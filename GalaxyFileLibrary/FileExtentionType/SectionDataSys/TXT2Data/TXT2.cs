@@ -79,7 +79,8 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
         public void ReadText(BinaryReader br) 
         {
 
-            
+            DisplayText displayText = new DisplayText();
+            displayText.Read(br);
 
             Console.WriteLine("End Text");
             Console.WriteLine(Text);

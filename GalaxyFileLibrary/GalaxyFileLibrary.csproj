@@ -51,8 +51,9 @@
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\DisplayText.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ITagData .cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SystemTag.cs" />
-    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SystemTagData\ISystemTagSubCategory.cs" />
-    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SystemTagData\Ruby.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\ISubCategory.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\Ruby.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagBase.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagModify.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TXT2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

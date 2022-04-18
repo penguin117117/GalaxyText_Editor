@@ -9,16 +9,25 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 {
     public class TagModify
     {
+        public ITagData CategoryTag { get; private set; }
+
         private readonly Dictionary<byte, ITagData> _tagDictionary = new Dictionary<byte, ITagData>
         {
             { 0x00 , new SystemTag() }
         };
 
-        public string Read(BinaryReader br)
+        public TagModify(BinaryReader br) 
         {
             byte[] CategoryByte = br.ReadBytes(2);
 
-            return _tagDictionary[CategoryByte[1]].Read(br);
+            CategoryTag = _tagDictionary[CategoryByte[1]];
+
+            Read(br);
+        }
+
+        private void Read(BinaryReader br)
+        {
+            CategoryTag.Read(br);
         }
     }
 }

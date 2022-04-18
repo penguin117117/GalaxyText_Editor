@@ -10,16 +10,20 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 {
     public class SystemTag : ITagData
     {
-        private readonly Dictionary<byte, ISystemTagSubCategory> _systemTagSubCategory = new Dictionary<byte, ISystemTagSubCategory>()
+        private readonly Dictionary<byte, ISubCategory> _systemTagSubCategory = new Dictionary<byte, ISubCategory>()
         {
             { 0x00 , new Ruby() }
-        };
+        }; 
 
-        public string Read(BinaryReader br)
+        public ISubCategory SubCategory { get; private set; }
+
+        public void Read(BinaryReader br)
         {
-            byte[] subCategory_2Byte = br.ReadBytes(2);
+            byte[] subCategoryBytes = br.ReadBytes(2);
 
-            return _systemTagSubCategory[subCategory_2Byte[1]].Read(br);
+            SubCategory = _systemTagSubCategory[subCategoryBytes[1]];
+
+            SubCategory.Read(br);
         }
     }
 }

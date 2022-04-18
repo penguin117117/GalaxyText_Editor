@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData;
 
 namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 {
     public interface ITagData
     {
-        string Read(BinaryReader br);
+        ISubCategory SubCategory { get; }
+        void Read(BinaryReader br);
     }
 }

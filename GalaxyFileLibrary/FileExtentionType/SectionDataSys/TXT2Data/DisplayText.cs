@@ -16,11 +16,11 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
         {
             while (true)
             {
-                byte[] Top2byte = br.ReadBytes(2);
+                byte[] stringBytes = br.ReadBytes(2);
 
-                bool isNullTermination   = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x00);
-                bool isNewLine           = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0A);
-                bool isTag               = (Top2byte[0] == 0x00) && (Top2byte[1] == 0x0E);
+                bool isNullTermination   = (stringBytes[0] == 0x00) && (stringBytes[1] == 0x00);
+                bool isNewLine           = (stringBytes[0] == 0x00) && (stringBytes[1] == 0x0A);
+                bool isTag               = (stringBytes[0] == 0x00) && (stringBytes[1] == 0x0E);
 
                 if (isNullTermination) break;
 
@@ -30,20 +30,20 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
                     continue;
                 }
 
-                if (isTag == true) 
+                if (isTag) 
                 {
                     Console.WriteLine(Text);
                     Console.WriteLine("pos: 0x" + br.BaseStream.Position.ToString("X"));
 
                     //TagModifyクラスをここに配置する
-                    TagData.TagModify tagModify = new TagData.TagModify();
-                    Text += tagModify.Read(br);
+                    TagData.TagModify tagModify = new TagData.TagModify(br);
+                    Text += tagModify.CategoryTag.SubCategory.TagText;
 
                     throw new Exception();
                     continue;
                 }
 
-                Text += Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(Top2byte);
+                Text += Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(stringBytes);
                 
             }
         }

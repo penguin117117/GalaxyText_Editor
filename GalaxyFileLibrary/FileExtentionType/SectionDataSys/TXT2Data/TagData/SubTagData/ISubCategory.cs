@@ -7,11 +7,9 @@ using System.IO;
 
 namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData
 {
-    public class Ruby : ISystemTagSubCategory
+    public interface ISubCategory
     {
-        public string Read(BinaryReader br)
-        {
-            return string.Empty;
-        }
+        string TagText { get; }
+        void Read(BinaryReader br);
     }
 }

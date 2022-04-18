@@ -22,7 +22,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Sy
             var rubyStr  = Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(br.ReadBytes(ruby*2));
             var kanjiStr = Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(br.ReadBytes(kanji*2));
 
-            TagText = $"[ふりがな=\"{rubyStr}\" 漢字=\"{kanjiStr}\"]";
+            TagText = $"[ふりがな=\"{rubyStr}\" 対象の文字=\"{kanjiStr}\"]";
 
             Console.WriteLine(TagText);
         }

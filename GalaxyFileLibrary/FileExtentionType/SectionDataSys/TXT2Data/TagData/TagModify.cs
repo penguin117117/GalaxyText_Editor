@@ -13,7 +13,8 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 
         private readonly Dictionary<byte, ITagData> _tagDictionary = new Dictionary<byte, ITagData>
         {
-            { 0x00 , new SystemTag() }
+            { 0x00 , new SystemTag() },
+            { 0x05 , new Tag05() }
         };
 
         public TagModify(BinaryReader br) 

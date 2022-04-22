@@ -24,7 +24,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Sy
 
             TagText = $"[ふりがな=\"{rubyStr}\" 対象の文字=\"{kanjiStr}\"]";
 
-            Console.WriteLine(TagText);
+            //Console.WriteLine(TagText);
         }
     }
 }

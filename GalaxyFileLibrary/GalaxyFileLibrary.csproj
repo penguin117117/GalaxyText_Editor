@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GalaxyFileLibrary</RootNamespace>
     <AssemblyName>GalaxyFileLibrary</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,10 +50,14 @@
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\ILBL1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\LBL1Data\LBL1.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\DisplayText.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ControlTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ITagData .cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PlayCharacter.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\Timer.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SystemTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\ISubCategory.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\Ruby.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\Tag05.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagBase.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagModify.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TXT2.cs" />

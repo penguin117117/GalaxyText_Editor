@@ -39,13 +39,15 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data
                     TagData.TagModify tagModify = new TagData.TagModify(br);
                     Text += tagModify.CategoryTag.SubCategory.TagText;
 
-                    throw new Exception();
+                    //throw new Exception();
                     continue;
                 }
 
                 Text += Encoding.GetEncoding(EncodingName.UTF16_Bigendian).GetString(stringBytes);
-                
+                //Console.WriteLine(Text);
             }
+
+            Console.WriteLine(Text);
         }
     }
 }

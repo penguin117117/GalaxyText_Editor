@@ -53,13 +53,18 @@
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ControlTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ITagData .cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PlayCharacter.cs" />
-    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\Timer.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SystemTagData\Color.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\NewPage.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\Timer.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\XCenter.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\YCenter.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SystemTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\ISubCategory.cs" />
-    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\Ruby.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SystemTagData\Ruby.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\Tag05.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagBase.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\TagModify.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\WindowSystemTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TXT2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

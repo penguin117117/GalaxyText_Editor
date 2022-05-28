@@ -32,8 +32,9 @@ namespace GalaxyText_Editor
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.新規ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StatusStrip = new System.Windows.Forms.StatusStrip();
+            this.MsbtNameListBox = new System.Windows.Forms.ListBox();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,12 @@ namespace GalaxyText_Editor
             this.OpenToolStripMenuItem.Text = "開く";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuOpen_Click);
             // 
+            // 新規ToolStripMenuItem
+            // 
+            this.新規ToolStripMenuItem.Name = "新規ToolStripMenuItem";
+            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.新規ToolStripMenuItem.Text = "新規";
+            // 
             // StatusStrip
             // 
             this.StatusStrip.Location = new System.Drawing.Point(0, 428);
@@ -71,17 +78,24 @@ namespace GalaxyText_Editor
             this.StatusStrip.TabIndex = 1;
             this.StatusStrip.Text = "statusStrip1";
             // 
-            // 新規ToolStripMenuItem
+            // MsbtNameListBox
             // 
-            this.新規ToolStripMenuItem.Name = "新規ToolStripMenuItem";
-            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.新規ToolStripMenuItem.Text = "新規";
+            this.MsbtNameListBox.AccessibleDescription = "";
+            this.MsbtNameListBox.AccessibleName = "";
+            this.MsbtNameListBox.FormattingEnabled = true;
+            this.MsbtNameListBox.ItemHeight = 12;
+            this.MsbtNameListBox.Location = new System.Drawing.Point(12, 27);
+            this.MsbtNameListBox.Name = "MsbtNameListBox";
+            this.MsbtNameListBox.ScrollAlwaysVisible = true;
+            this.MsbtNameListBox.Size = new System.Drawing.Size(220, 388);
+            this.MsbtNameListBox.TabIndex = 2;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MsbtNameListBox);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
             this.MainMenuStrip = this.MenuStrip;
@@ -101,6 +115,7 @@ namespace GalaxyText_Editor
         private System.Windows.Forms.ToolStripMenuItem OpenToolStripMenuItem;
         private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStripMenuItem 新規ToolStripMenuItem;
+        private System.Windows.Forms.ListBox MsbtNameListBox;
     }
 }
 

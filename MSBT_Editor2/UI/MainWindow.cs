@@ -10,9 +10,13 @@ using System.Windows.Forms;
 using System.IO;
 using FileSystemLibrary;
 using GalaxyFileLibrary.FileExtentionType.MsbtData;
+using GalaxyFileLibrary.FileExtentionType.SectionDataSys.LBL1Data;
 
 namespace GalaxyText_Editor {
     public partial class MainWindow : Form  {
+    
+        protected Msbt MsbtData { get; set; }
+
         public MainWindow() {
             InitializeComponent();
             //string[] SupportExtentions = { ".msbt" };
@@ -64,8 +68,12 @@ namespace GalaxyText_Editor {
 
             switch (extension)  {
                 case ".msbt":
-                    Msbt msbt = new Msbt(File.ReadAllBytes(path));
-                    msbt.Load();
+                    MsbtData = new Msbt(File.ReadAllBytes(path));
+                    MsbtData.Load();
+
+                    if (MsbtNameListBox.Items.Count != default) MsbtNameListBox.Items.Clear();
+                    foreach(LabelNameEntry labelNameEntry in MsbtData.LBL1.LabelNameEntries.FromBinary)
+                    MsbtNameListBox.Items.Add(labelNameEntry.LabelName);
                     break;
                 case ".msbf":
                     break;

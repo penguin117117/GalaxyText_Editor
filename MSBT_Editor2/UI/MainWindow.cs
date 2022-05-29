@@ -19,7 +19,6 @@ namespace GalaxyText_Editor {
 
         public MainWindow() {
             InitializeComponent();
-            //string[] SupportExtentions = { ".msbt" };
             //FileDialogLibrary fileDialogLibrary = new FileDialogLibrary(SupportExtentions, FileDialogLibrary.DialogMode.Open);
         }
 

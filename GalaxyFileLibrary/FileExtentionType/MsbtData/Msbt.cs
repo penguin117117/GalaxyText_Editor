@@ -13,10 +13,10 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
     public class Msbt
     {
         public IMSB_X_Header Header => _msbtHeader;
-        //public ILBL1 LBL1 => _lbl1;
+        public ILBL1 LBL1 => _lbl1;
 
         private IMSB_X_Header _msbtHeader;
-        public LBL1 LBL1 { get; private set; }
+        private ILBL1 _lbl1 { get; set; }
         private ATR1 _atr1;
         private TXT2 _txt2;
         private byte[] OldBinaryData;
@@ -24,7 +24,7 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
         public Msbt(byte[] binData) 
         {
             _msbtHeader = new MsbtHeader();
-            LBL1 = new LBL1();
+            _lbl1 = new LBL1();
             _atr1 = new ATR1();
             _txt2 = new TXT2();
             OldBinaryData = binData;
@@ -37,7 +37,7 @@ namespace GalaxyFileLibrary.FileExtentionType.MsbtData
                 using (BinaryReader br = new BinaryReader(ms)) {
 
                     _msbtHeader.Read(br);
-                    LBL1.Read(br);
+                    _lbl1.Read(br);
                     _atr1.Read(br);
                     _txt2.Read(br);
                 };

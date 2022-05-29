@@ -52,7 +52,9 @@
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\DisplayText.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ControlTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ITagData .cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SoundSystemTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PlayCharacter.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SoundSystemTagData\SoundEffect.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SystemTagData\Color.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\NewPage.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\WindowSystemTagData\Timer.cs" />

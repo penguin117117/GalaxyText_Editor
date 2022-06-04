@@ -1,4 +1,5 @@
-﻿using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData;
+﻿using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SubTagData.SoundSystemTagData;
+using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
     {
         private readonly Dictionary<byte, ISubCategory> _systemTagSubCategory = new Dictionary<byte, ISubCategory>()
         {
-            //{ 0x00 , new PlayCharacter() }
+            { 0x00 , new SoundEffect() }
         };
 
         public ISubCategory SubCategory { get; private set; }

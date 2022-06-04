@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GalaxyFileStreamLibrary;
 
 namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SubTagData.SoundSystemTagData
 {
@@ -15,11 +16,13 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Su
 
         public void Read(BinaryReader br)
         {
-            br.ReadBytes(2);
+            var bytes = br.ReadBytes(2);
 
-            var time = BigEndian.ReadUInt16(br);
+            var readCharsCount = bytes[1];
 
-            TagText = $"[時間=\"{time}\"]";
+            var soundEffectName = ReadString.FromBinaryRead(br,readCharsCount);
+
+            TagText = $"<SE=\"{soundEffectName}\">";
         }
     }
 }

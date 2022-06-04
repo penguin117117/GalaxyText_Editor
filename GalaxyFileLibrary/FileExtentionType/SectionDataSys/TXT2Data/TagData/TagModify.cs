@@ -16,6 +16,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
             { 0x00 , new SystemTag() },
             { 0x01 , new WindowSystemTag()},
             { 0x02 , new SoundSystemTag()},
+            { 0x03 , new PictureFontTag()},
             { 0x05 , new Tag05() }
         };
 

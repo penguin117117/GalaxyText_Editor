@@ -20,7 +20,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Su
 
             var time = BigEndian.ReadUInt16(br);
 
-            TagText = $"[時間=\"{time}\"]";
+            TagText = $"<時間=\"{time}\">";
         }
     }
 }

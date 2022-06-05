@@ -10,7 +10,7 @@ using GalaxyFileStreamLibrary;
 
 namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SubTagData.SoundSystemTagData
 {
-    class SoundEffect : ISubCategory
+    public class SoundEffect : ISubCategory
     {
         public string TagText { get; private set; }
 

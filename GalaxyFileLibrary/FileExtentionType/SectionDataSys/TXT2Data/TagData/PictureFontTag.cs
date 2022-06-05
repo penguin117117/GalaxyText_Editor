@@ -1,4 +1,5 @@
-﻿using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData;
+﻿using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SubTagData.PictureFontTagData;
+using GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.SystemTagData;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 {
     public class PictureFontTag : ITagData
     {
-        private readonly Dictionary<byte, ISubCategory> _systemTagSubCategory = new Dictionary<byte, ISubCategory>()
+        private readonly Dictionary<byte, ISubCategory> _pictureFontTagSubCategory = new Dictionary<byte, ISubCategory>()
         {
             //{ 0x00 , new SoundEffect() }
         };
@@ -19,9 +20,9 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData
 
         public void Read(BinaryReader br)
         {
-            byte[] subCategoryBytes = br.ReadBytes(2);
+            //byte[] subCategoryBytes = br.ReadBytes(2);
 
-            SubCategory = _systemTagSubCategory[subCategoryBytes[1]];
+            SubCategory = new PictureFont();
 
             SubCategory.Read(br);
         }

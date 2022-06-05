@@ -54,6 +54,7 @@
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\ITagData .cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\PictureFontTag.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SoundSystemTag.cs" />
+    <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PictureFontTagData\PictureFont.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PlayCharacter.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SoundSystemTagData\SoundEffect.cs" />
     <Compile Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\SystemTagData\Color.cs" />
@@ -73,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FileCheck\" />
-    <Folder Include="FileExtentionType\SectionDataSys\TXT2Data\TagData\SubTagData\PictureFontTagData\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystemLibrary\FileSystemLibrary.csproj">

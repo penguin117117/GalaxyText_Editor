@@ -21,9 +21,9 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Su
         public void Read(BinaryReader br)
         {
             string checkBytesString = "000E0003";
-            checkBytesString += BigEndian.ReadUInt16(br).ToString("X2");
-            checkBytesString += BigEndian.ReadUInt16(br).ToString("X2");
-            checkBytesString += BigEndian.ReadUInt16(br).ToString("X2");
+            checkBytesString += BigEndian.ReadUInt16(br).ToString("X4");
+            checkBytesString += BigEndian.ReadUInt16(br).ToString("X4");
+            checkBytesString += BigEndian.ReadUInt16(br).ToString("X4");
 
             string tagData = _pictureFont[checkBytesString];
 

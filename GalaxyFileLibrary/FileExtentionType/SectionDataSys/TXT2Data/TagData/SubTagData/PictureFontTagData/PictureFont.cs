@@ -25,9 +25,19 @@ namespace GalaxyFileLibrary.FileExtentionType.SectionDataSys.TXT2Data.TagData.Su
             checkBytesString += BigEndian.ReadUInt16(br).ToString("X4");
             checkBytesString += BigEndian.ReadUInt16(br).ToString("X4");
 
-            string tagData = _pictureFont[checkBytesString];
+            string pictureFontName = checkBytesString;
 
-            TagText = $"<PictureFont=\"{tagData}\">";
+            if (FindPictureFontNameFromDictionary_Key(pictureFontName))
+            {
+                pictureFontName = _pictureFont[checkBytesString];
+            }
+
+            TagText = $"<PictureFont=\"{pictureFontName}\">";
+        }
+
+        private bool FindPictureFontNameFromDictionary_Key(string checkBytesString) 
+        {
+            return _pictureFont.ContainsKey(checkBytesString);
         }
     }
 }
